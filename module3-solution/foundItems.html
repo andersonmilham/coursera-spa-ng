@@ -1,0 +1,11 @@
+<div class="row">
+    <ul class="col-md-12 ">
+        <li ng-repeat="item in nidCtrl.foundItems ">
+            <hr>
+            {{item.name}}, {{item.short_name}}, {{item.description}}
+            <button ng-click="nidCtrl.onRemove({index: $index});">Don't want this one!</button>
+        </li>
+    </ul>
+
+    <span class="col-md-12 " ng-if="nidCtrl.searchedAtLeastOnce && nidCtrl.foundItems.length === 0">Nothing found</span>
+</div>
