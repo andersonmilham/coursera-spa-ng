@@ -1,0 +1,13 @@
+<h3 class="col-md-12" ng-if="$ctrl.lastRemoved">You've just removed: {{$ctrl.lastRemoved.name}}</h3>
+
+<div class="row">
+    <ul class="col-md-12 ">
+        <li ng-repeat="item in $ctrl.foundItems ">
+            <hr>
+            {{item.name}}, {{item.short_name}}, {{item.description}}
+            <button ng-click="$ctrl.onRemove({index: $index});">Don't want this one!</button>
+        </li>
+    </ul>
+
+    <span class="col-md-12 " ng-if="$ctrl.searchedAtLeastOnce && $ctrl.foundItems.length === 0">Nothing found</span>    
+</div>
