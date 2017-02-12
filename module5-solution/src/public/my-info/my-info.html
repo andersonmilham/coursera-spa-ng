@@ -1,0 +1,23 @@
+<div class="container">
+
+    <h2 ng-if="(!!myInfoCtrl.user) == false">Not Signed Up Yet. <a ui-sref="public.sign-up">Sign up Now!</a></h2>
+
+    <div ng-if="myInfoCtrl.user">
+    First Name: {{::myInfoCtrl.user.firstName}} <br>
+
+    Last Name: {{::myInfoCtrl.user.lastName}} <br>
+
+    Email: {{::myInfoCtrl.user.email}} <br>
+
+    Phone: {{::myInfoCtrl.user.phone}} <br>
+
+    Favority Dish: {{::myInfoCtrl.user.dish}} <br>
+    <br>
+    <div>{{::myInfoCtrl.dish.name}}</div>
+    <img width="250" height="150" ng-src="{{::myInfoCtrl.basePath}}/images/{{myInfoCtrl.dish.short_name}}.jpg" alt="{{::myInfoCtrl.dish.name}}">
+    <br>
+    {{::myInfoCtrl.dish.description}}
+
+    </div>    
+
+</div>
